@@ -67,7 +67,7 @@ export function renderComponent(component, opts, mountAll, isChild) {
 		previousState = component.prevState || state,
 		previousContext = component.prevContext || context,
 		isUpdate = component.base,
-		nextBase = component.nextBase,
+		nextBase = null,  // (ngokevin) Disable recycling.
 		initialBase = isUpdate || nextBase,
 		initialChildComponent = component._component,
 		skip = false,
